@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Box,
   Button,
@@ -5,12 +6,10 @@ import {
   Grid,
   ThemeProvider,
   Typography,
-  createTheme
+  createTheme,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import React from "react";
-import Footer from "./utils/Footer";
-import TopBar from "./utils/TopBar";
+
 const theme = createTheme({
   palette: {
     mode: "dark",
@@ -32,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-
   image: {
     maxWidth: "100%",
   },
@@ -58,13 +56,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const LandingPage = () => {
+const LandingPage: React.FC = () => {
   const classes = useStyles();
 
   return (
     <ThemeProvider theme={theme}>
-      <div className={classes.root}>
-        <TopBar />
+      <Box className={classes.root}>
         <Box className={classes.main}>
           <Container maxWidth="lg">
             <Grid
@@ -91,8 +88,7 @@ const LandingPage = () => {
             </Grid>
           </Container>
         </Box>
-        <Footer />
-      </div>
+      </Box>
     </ThemeProvider>
   );
 };

@@ -1,37 +1,32 @@
-import { ThemeProvider, createTheme } from "@material-ui/core";
+import { Box, Typography, Link, Grid } from "@material-ui/core";
+import { Category, LinkedIn } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
-import Footer from "./utils/Footer";
-import TopBar from "./utils/TopBar";
-
-const theme = createTheme({
-  palette: {
-    mode: "dark",
-    primary: {
-      main: "#fff",
-    },
-    secondary: {
-      main: "#fff",
-    },
-  },
-});
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    flexDirection: "column",
-    minHeight: "100vh",
-  },
   contactInfo: {
-    marginTop: "2rem",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    color: "#fff",
+    backgroundColor: "#333",
+    color: "#fff", // <-- add this line
+    marginTop: theme.spacing(2),
     "& > *": {
-      margin: "0.5rem",
+      marginBottom: theme.spacing(1),
     },
+    "& a": {
+      display: "flex",
+      alignItems: "center",
+      textDecoration: "none",
+      color: theme.palette.common.white,
+    },
+    "& svg": {
+      marginRight: theme.spacing(1),
+    },
+  },
+  textWhite: {
+    color: theme.palette.common.white,
   },
 }));
 
@@ -39,34 +34,47 @@ const ContactsPage: React.FC = () => {
   const classes = useStyles();
 
   return (
-    <ThemeProvider theme={theme}>
-      <div className={classes.root}>
-        <TopBar />
-        <div className={classes.contactInfo}>
-          <h2>Contact Information</h2>
-          <p>
-            I am open to hearing about any job opportunities, freelance work, or
-            any other inquiries you may have. Please feel free to reach out to
-            me with any questions or comments.
-          </p>
-          <p>Email: swapnilnare007@gmail.com</p>
-          <p>Phone: +91 87665679006</p>
-          <p>
-            LinkedIn:{" "}
-            <a href="https://www.linkedin.com/in/swapnil-nare-b90303193/">
-              https://www.linkedin.com
-            </a>
-          </p>
-          <p>
-            Artstaion:{" "}
-            <a href="https://www.artstation.com/vamps23/profile">
-              https://www.artstation.com/
-            </a>
-          </p>
-        </div>
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div style={{ backgroundColor: "#333" }}>
+      <Box py={4}>
+        <Grid container justifyContent="center">
+          <Grid item xs={12} sm={8} md={6}>
+            <Typography
+              variant="h4"
+              align="center"
+              gutterBottom
+              className={classes.textWhite}
+            >
+              Contact Information
+            </Typography>
+            <Typography
+              align="center"
+              gutterBottom
+              className={classes.textWhite}
+            >
+              I am open to hearing about any job opportunities, freelance work,
+              or any other inquiries you may have. Please feel free to reach out
+              to me with any questions or comments.
+            </Typography>
+            <div className={`${classes.contactInfo} ${classes.textWhite}`}>
+              <Typography>Email: swapnilnare007@gmail.com</Typography>
+              <Typography>Phone: +91 87665679006</Typography>
+              <Typography>
+                <Link href="https://www.linkedin.com/in/swapnil-nare-b90303193/">
+                  <LinkedIn />
+                  LinkedIn
+                </Link>
+              </Typography>
+              <Typography>
+                <Link href="https://www.artstation.com/vamps23/profile">
+                  <Category />
+                  Artstation
+                </Link>
+              </Typography>
+            </div>
+          </Grid>
+        </Grid>
+      </Box>
+    </div>
   );
 };
 

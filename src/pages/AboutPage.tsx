@@ -1,8 +1,10 @@
-import { ThemeProvider, createTheme } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { Box, Typography } from "@material-ui/core";
+import {
+  ThemeProvider,
+  createTheme,
+  makeStyles,
+} from "@material-ui/core/styles";
 import React from "react";
-import Footer from "./utils/Footer";
-import TopBar from "./utils/TopBar";
 
 const theme = createTheme({
   palette: {
@@ -17,11 +19,6 @@ const theme = createTheme({
 });
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    flexDirection: "column",
-    minHeight: "100vh",
-  },
   aboutSection: {
     display: "flex",
     flexDirection: "column",
@@ -29,26 +26,24 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     padding: "2rem",
     color: "#fff",
-
+    backgroundColor: "#333", // <-- add this line
   },
   aboutText: {
     maxWidth: "50rem",
     textAlign: "center",
     color: "#fff",
-
   },
 }));
 
-const AboutPage: React.FC = () => {
+const AboutPage = () => {
   const classes = useStyles();
 
   return (
     <ThemeProvider theme={theme}>
-      <div className={classes.root}>
-        <TopBar />
-        <section className={classes.aboutSection}>
-          <h1>About Me</h1>
-          <p className={classes.aboutText}>
+      <div style={{ backgroundColor: "#333" }}>
+        <Box className={classes.aboutSection} minHeight="100vh">
+          <Typography variant="h4">About Me</Typography>
+          <Typography variant="body1" className={classes.aboutText}>
             Hello and welcome to my portfolio! I'm a 3D artist with over three
             years plus of experience working in the VFX and game industry. My
             expertise includes proficiency in a variety of software tools such
@@ -63,9 +58,8 @@ const AboutPage: React.FC = () => {
             animation to environment design and texturing, I take pride in every
             aspect of the 3D production pipeline. Thank you for visiting my
             portfolio, and I look forward to hearing from you soon.
-          </p>
-        </section>
-        <Footer />
+          </Typography>
+        </Box>
       </div>
     </ThemeProvider>
   );

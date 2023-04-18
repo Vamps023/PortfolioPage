@@ -1,28 +1,13 @@
-import {
-  Card,
-  CardActionArea,
-  CardMedia,
-  Grid,
-  Typography,
-} from "@material-ui/core";
-import { ThemeProvider, createTheme } from "@material-ui/core/styles";
+import { Box, Grid, Paper, Typography, makeStyles } from "@material-ui/core";
 import React from "react";
-import Footer from "./utils/Footer";
-import TopBar from "./utils/TopBar";
 
-const theme = createTheme({
-  palette: {
-    mode: "dark",
-    primary: {
-      main: "#fff",
-    },
-    secondary: {
-      main: "#fff",
-    },
-  },
-});
+interface Image {
+  src: string;
+  Artstation: string;
+  name: string;
+}
 
-const images = [
+const images: Image[] = [
   {
     src: "https://cdnb.artstation.com/p/assets/covers/images/053/513/091/smaller_square/swapnil-nare-swapnil-nare-render-1.jpg?1662396284",
     Artstation: "https://www.artstation.com/artwork/eJyG9D",
@@ -55,72 +40,52 @@ const images = [
   },
 ];
 
-const ProjectsPage = () => {
-  const handleImageClick = (link) => {
+const useStyles = makeStyles((theme) => ({
+  ProjectsSection: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "1rem",
+    color: "#fff",
+    backgroundColor: "#333", // <-- add this line
+  },
+  aboutText: {
+    maxWidth: "50rem",
+    textAlign: "center",
+    color: "#fff",
+  },
+}));
+const ProjectsPage: React.FC = () => {
+  const handleImageClick = (link: string) => {
     window.open(link, "_blank");
   };
+  const classes = useStyles();
 
   return (
-    <ThemeProvider theme={theme}>
-      <div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            minHeight: "100vh",
-          }}
-        >
-          <TopBar />
-          <div
-            style={{
-              flexGrow: 1,
-              marginLeft: "24px",
-              marginRight: "24px",
-              overflow: "auto",
-            }}
-          >
-            <div style={{ overflowX: "scroll" }}>
-              <Grid container spacing={3}>
-                {images.map((image, index) => (
-                  <Grid item xs={6} sm={3} md={2} key={index}>
-                    <Card
-                      sx={{
-                        height: "100%",
-                        display: "flex",
-                        flexDirection: "column",
-                      }}
-                      elevation={1}
-                      square={true}
-                    >
-                      <CardActionArea
-                        onClick={() => handleImageClick(image.Artstation)}
-                      >
-                        <CardMedia
-                          component="img"
-                          image={image.src}
-                          alt="Art Name"
-                          style={{ height: "100%" }}
-                        />
-                      </CardActionArea>
-                      <div style={{ padding: "8px", background: "#3d3c3c" }}>
-                        <Typography
-                          variant="subtitle1"
-                          component="div"
-                          style={{ color: "white" }}
-                        >
-                          {image.name}
-                        </Typography>
-                      </div>
-                    </Card>
-                  </Grid>
-                ))}
-              </Grid>
-            </div>
-          </div>
-          <Footer />
-        </div>
-      </div>
-    </ThemeProvider>
+    <div style={{ flexGrow: 1, margin: "24px", backgroundColor: "#333" }}>
+      <Box className={classes.ProjectsSection}>
+        <Typography variant="h4">Projects</Typography>
+        <Grid container spacing={3}>
+          {images.map((image: Image, index: number) => (
+            <Grid item xs={6} sm={4} md={2} key={index}>
+              <Paper onClick={() => handleImageClick(image.Artstation)}>
+                <img
+                  src={image.src}
+                  alt={image.name}
+                  style={{ width: "100%" }}
+                />
+                <div style={{ padding: "8px", background: "#3d3c3c" }}>
+                  <Typography variant="subtitle1" style={{ color: "white" }}>
+                    {image.name}
+                  </Typography>
+                </div>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+    </div>
   );
 };
 

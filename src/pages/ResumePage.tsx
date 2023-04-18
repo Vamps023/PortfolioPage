@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     minHeight: "100vh",
+    backgroundColor: "#333",
   },
 }));
 
@@ -29,10 +30,7 @@ const ResumePage: React.FC = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className={classes.root}>
-        <TopBar />
-      </div>
-      <Footer />
+      <div className={classes.root}></div>
     </ThemeProvider>
   );
 };

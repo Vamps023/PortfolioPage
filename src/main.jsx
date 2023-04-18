@@ -1,6 +1,6 @@
+import { createRoot } from "react-dom/client";
 import { createTheme, Grid, ThemeProvider } from "@material-ui/core";
 import React from "react";
-import ReactDOM from "react-dom";
 import App from "./App";
 
 const theme = createTheme({
@@ -15,7 +15,7 @@ const theme = createTheme({
   },
 });
 
-ReactDOM.render(
+createRoot(document.getElementById("root")).render(
   <ThemeProvider theme={theme}>
     <Grid
       container
@@ -23,6 +23,5 @@ ReactDOM.render(
     >
       <App />
     </Grid>
-  </ThemeProvider>,
-  document.getElementById("root")
+  </ThemeProvider>
 );

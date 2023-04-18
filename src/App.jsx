@@ -1,5 +1,7 @@
-import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { ThemeProvider, createTheme } from "@material-ui/core/styles";
+import React from "react";
+import { animateScroll as scroll } from "react-scroll";
+import TopBar from "./components/TopBar";
 import AboutPage from "./pages/AboutPage";
 import ContactsPage from "./pages/ContactsPage";
 import LandingPage from "./pages/LandingPages";
@@ -16,24 +18,37 @@ const theme = createTheme({
       xl: 1920,
     },
   },
+  section: {
+    height: "100vh",
+    scrollSnapAlign: "start",
+    scrollSnapStop: "always",
+    backgroundColor: "#333",
+  },
 });
 
 function App() {
+  const handleScrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <ThemeProvider theme={theme}>
-      <div style={{ height: "100vh", width: "100vw", overflow: "hidden" }}>
-        <Router>
-          <Routes>
-            <Route path="/home" element={<LandingPage />} />
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contacts" element={<ContactsPage />} />
-            <Route path="/resume" element={<ResumePage/>} />
-            <Route path="/projects" element={<ProjectsPage/>} />
-
-          </Routes>
-        </Router>
-      </div>
+      <TopBar />
+      <section style={{ backgroundColor: "#333" }} id="landing-page">
+        <LandingPage />
+      </section>
+      <section style={{ backgroundColor: "#333" }} id="resume-page">
+        <ResumePage />
+      </section>
+      <section style={{ backgroundColor: "#333" }} id="projects-page">
+        <ProjectsPage />
+      </section>
+      <section style={{ backgroundColor: "#333" }} id="about-page">
+        <AboutPage />
+      </section>
+      <section style={{ backgroundColor: "#333" }} id="contacts-page">
+        <ContactsPage />
+      </section>
     </ThemeProvider>
   );
 }
