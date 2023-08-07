@@ -1,5 +1,4 @@
 
-import logo from './logo/logo-black.png';
 import logotext from './logo/logo-text-black.png';
 
 
@@ -35,7 +34,6 @@ export {
   artstationHover, backend, blender, blowTorch, bop, close,
   download,
   downloadHover, frontend, github,
-  logo,
   logotext, menu, mpc, prototyping,
   resume, send,
   sendHover, ux, wastelandSheriff, xeco
