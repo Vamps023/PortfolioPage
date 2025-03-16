@@ -19,7 +19,7 @@ export default function Home() {
               objectPosition: '30% 50%' // Adjust these values to position the photo
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-black/60 to-black"></div>
+          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-black/40 to-black"></div>
         </div>
       {/* Hero Section with Integrated Photo */}
       <section className="relative min-h-[90vh] flex items-center">
@@ -29,7 +29,7 @@ export default function Home() {
             <h2 className="text-5xl lg:text-7xl font-bold mb-6">
               <span className="text-white">Swapnil</span> <span className="text-[#FF4500]">Nare</span>
             </h2>
-            <p className="text-2xl text-zinc-300 mb-8">Technical Artist</p>
+            <p className="text-2xl text-zinc-300 mb-8">3D Environment And Technical Artist</p>
             <p className="text-lg text-zinc-400 leading-relaxed mb-10">
               Passionate 3D artist with over three years of professional experience in the VFX and game industry. My
               journey has taken me through various roles at prestigious companies, where I've contributed to
@@ -318,7 +318,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 px-4 lg:px-16 text-center border-t border-zinc-800">
         <div className="max-w-7xl mx-auto">
-          <p className="text-zinc-400"> 2023 Swapnil Nare. All rights reserved.</p>
+          <p className="text-zinc-400"> 2025 Swapnil Nare. All rights reserved.</p>
           <div className="flex justify-center gap-6 mt-6">
             <a
               href="https://www.linkedin.com/in/swapnilnare/"
