@@ -14,7 +14,6 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ['drive.google.com', 'hebbkx1anhila5yf.public.blob.vercel-storage.com','pic.surf'],
     unoptimized: true,
   },
   experimental: {

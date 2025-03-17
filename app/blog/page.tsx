@@ -127,6 +127,33 @@ export default function BlogPage() {
                 </div>
               </div>
             </Link>
+
+            <Link href="/blog/technical-tools" className="group">
+              <div className="bg-zinc-800 rounded-lg overflow-hidden h-full">
+                <div className="relative h-64">
+                  <Image
+                    src="/placeholder.svg?height=600&width=800"
+                    alt="Technical Artist Tools"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-4 mb-2">
+                    <span className="text-xs text-zinc-400">March 17, 2025</span>
+                    <span className="text-xs px-2 py-1 bg-zinc-700 rounded-full">Technical Tools</span>
+                  </div>
+                  <h3 className="text-xl font-semibold group-hover:text-[#FF4500] transition-colors">
+                    Developing Tools for Technical Artists
+                  </h3>
+                  <p className="text-zinc-400 mt-2">
+                    An overview of my approach to creating specialized tools that enhance workflows for technical
+                    artists and 3D professionals.
+                  </p>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
