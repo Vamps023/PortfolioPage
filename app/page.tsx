@@ -110,6 +110,22 @@ export default function Home() {
               </div>
             </Link>
 
+            <Link href="/projects/prop-blowtorch" className="group">
+              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-render1.jpg-UkG2aKcOIk6a9zYjMf8md9lK8HrT31.jpeg"
+                  alt="Blowtorch"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                <div className="absolute bottom-0 left-0 p-6">
+                  <h3 className="text-xl font-bold text-white mb-2">Blowtorch</h3>
+                  <p className="text-zinc-300 text-sm">Props Artist</p>
+                </div>
+              </div>
+            </Link>
+
           </div>
         </div>
       </section>
