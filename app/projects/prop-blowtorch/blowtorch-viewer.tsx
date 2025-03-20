@@ -52,7 +52,7 @@ export default function BlowTorchViewer() {
 
         <ContactShadows position={[0, -1, 0]} opacity={0.4} scale={5} blur={2.5} far={4} />
 
-        <Environment preset="studio" />
+        <Environment preset="forest" />
 
         <OrbitControls />
       </Suspense>
