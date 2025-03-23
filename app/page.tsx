@@ -5,7 +5,6 @@ import { Linkedin, Mail, Phone, Palette } from "lucide-react"
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
-
       {/* Hero Section with Integrated Photo */}
       <section className="relative min-h-[90vh] flex items-center">
         {/* Background gradient overlay */}
@@ -62,8 +61,9 @@ export default function Home() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/projects/buggy" className="group">
-              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
+            {/* Featured Project */}
+            <Link href="/projects/buggy" className="group lg:col-span-2 lg:row-span-2">
+              <div className="relative overflow-hidden rounded-lg aspect-[16/9] lg:aspect-[16/10]">
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-1.jpg-KWZwWjPlY3ofzCgCIo4WDBU0MAu99P.jpeg"
                   alt="Game Ready Buggy"
@@ -72,13 +72,77 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
                 <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Buggy (Game Ready)</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">Buggy (Game Ready)</h3>
                   <p className="text-zinc-300 text-sm">UE5 Environment and Vehicle Asset</p>
                 </div>
               </div>
             </Link>
 
-            <Link href="/projects/monarch" className="group">
+            <Link href="/projects/buggy-technical-breakdown" className="group">
+              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-14.jpg-Ey3eyiRAPRfpspaauC9I7HP7ovP6Xg.jpeg"
+                  alt="Buggy Technical Breakdown"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                <div className="absolute bottom-0 left-0 p-6">
+                  <h3 className="text-xl font-bold text-white mb-2">Buggy Technical Breakdown</h3>
+                  <p className="text-zinc-300 text-sm">Modeling & Texturing Process</p>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/projects/deadpool-bust" className="group">
+              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-2%20%282%29.jpg-QW5MPsfQj70nCdJJw9aRgIrY4VtIEA.jpeg"
+                  alt="Deadpool 3D Bust"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                <div className="absolute bottom-0 left-0 p-6">
+                  <h3 className="text-xl font-bold text-white mb-2">Deadpool 3D Bust</h3>
+                  <p className="text-zinc-300 text-sm">3D Print-Ready Character Bust</p>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/projects/wasteland-sheriff" className="group">
+              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-artboard-1.jpg-iWiuSFYm6iD6vccDkCzwVZErB8kf5N.jpeg"
+                  alt="Wasteland Sheriff"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                <div className="absolute bottom-0 left-0 p-6">
+                  <h3 className="text-xl font-bold text-white mb-2">Wasteland Sheriff</h3>
+                  <p className="text-zinc-300 text-sm">Valorant Fan Art - Game Weapon</p>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/projects/prop-blowtorch" className="group">
+              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-render1.jpg-UkG2aKcOIk6a9zYjMf8md9lK8HrT31.jpeg"
+                  alt="Vintage Blowtorch"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                <div className="absolute bottom-0 left-0 p-6">
+                  <h3 className="text-xl font-bold text-white mb-2">Vintage Blowtorch</h3>
+                  <p className="text-zinc-300 text-sm">Game-Ready Prop Model</p>
+                </div>
+              </div>
+            </Link>
+
+            {/* <Link href="/projects/monarch" className="group">
               <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
                 <Image
                   src="/placeholder.svg?height=300&width=400"
@@ -92,7 +156,7 @@ export default function Home() {
                   <p className="text-zinc-300 text-sm">Asset and Technical Artist</p>
                 </div>
               </div>
-            </Link>
+            </Link> */}
 
             <Link href="/projects/antman" className="group">
               <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
@@ -109,23 +173,6 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-
-            <Link href="/projects/prop-blowtorch" className="group">
-              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-render1.jpg-UkG2aKcOIk6a9zYjMf8md9lK8HrT31.jpeg"
-                  alt="Blowtorch"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Blowtorch</h3>
-                  <p className="text-zinc-300 text-sm">Props Artist</p>
-                </div>
-              </div>
-            </Link>
-
           </div>
         </div>
       </section>
@@ -222,7 +269,6 @@ export default function Home() {
                 </a>
               </div>
             </div>
-
           </div>
 
           <div className="mt-16 text-center">
@@ -416,75 +462,75 @@ export default function Home() {
 
 // Sample data with real company logos
 const workExperiences = [
-  {
-    title: "3D Environment Artist",
-    year: "Dec 2023 - Present",
-    role: "Engineering Support Associate",
-    company: "SOGECLAIR",
-    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQHgqV6XmICSPg/company-logo_100_100/company-logo_100_100/0/1704211861157/groupesogeclair_logo?e=1750291200&v=beta&t=_516khQ9I8_hPw-ODo1YOlHAyNiXqKw1F5ZIhsBdbUA",
-    description:
-      `Real-Time Simulation Environment Projects
-      • Created simulation environments for bus and train training using Blender and UNIGINE
-      • Designed and modeled buildings, roads, foliage, and props
-      • Applied high-quality textures with Photoshop for consistent visuals
-      • Optimized scenes with LODs and light baking for performance and realism
-      • Developed add-ons for Blender and UNIGINE to streamline workflows
-      • Used Geometry Nodes for procedural and scalable assets
-      • Optimized assets for real-time rendering with reduced poly counts and improved UV layouts
-      • Implemented PBR workflows for realistic materials
-      • Resolved pipeline issues for seamless collaboration
-      • Designed asset pipelines with automated versioning and management tools`,
-  },
-  {
-    title: "Asset Artist",
-    year: "May 2022 - May 2023",
-    role: "Artist - Asset",
-    company: "MPC",
-    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQH3G1T3TIn9nA/company-logo_100_100/company-logo_100_100/0/1697042590342/mpcvfx_logo?e=1750291200&v=beta&t=fEhawbC3uW16yh7Xes30etxmHLXWoHxOmFh80x6VmIM",
-    description:
-      "Notable Projects\n\n" +
-      "• Ant-Man and the Wasp: Quantumania\n" +
-      "  - Contributed as a Prop and Environment Artist\n" +
-      "  - Focused on high-quality asset creation and optimization for VFX pipelines\n\n" +
-      "• An Atlas Netflix Film\n" +
-      "  - Served as a Technical Artist\n" +
-      "  - Specialized in pipeline automation and asset optimization\n" +
-      "  - Ensured seamless integration between DCC tools and rendering engines\n\n" +
-      "• Monarch: Legacy of Monsters\n" +
-      "  - Worked as an Environment Artist and Technical Artist\n" +
-      "  - Combined artistic skills with technical expertise to create detailed environments\n" +
-      "  - Streamlined workflows for efficient production\n\n" +
-      "Key Technical Artist Contributions\n\n" +
-      "• Developed custom Python scripts to automate repetitive tasks and enhance pipeline efficiency\n" +
-      "• Debugged and resolved technical issues related to material setups, asset imports/exports, and rendering pipelines\n" +
-      "• Collaborated closely with developers and artists to bridge the gap between art and technology, ensuring smooth production workflows",
-  },
-  {
-    title: "3D Artist",
-    year: "Jan 2020 - Mar 2022",
-    role: "3D Artist",
-    company: "BOP Consultancy and Services",
-    logo: "https://media.licdn.com/dms/image/v2/C510BAQF4QAFc8j8hOA/company-logo_100_100/company-logo_100_100/0/1630575271638?e=1750291200&v=beta&t=Ts42Sz8z9T5uT57jLFdMRVoszU1JvwdWfTI0FUu67aI",
-    description:
-      "• Created architectural visualizations and product designs for client presentations\n" +
-      "• Optimized 3D models for real-time applications and marketing materials\n" +
-      "• Developed efficient workflows for asset creation and management\n" +
-      "• Collaborated with design teams to meet project requirements and deadlines",
-  },
-  {
-    title: "3D Artist",
-    year: "Jun 2019 - Oct 2019",
-    role: "3D Artist",
-    company: "XECO",
-    logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGaEL7Tzt2tlQ/company-logo_100_100/company-logo_100_100/0/1631304157243?e=1750291200&v=beta&t=rTwnwQaZHDX3cy--YLuLYf_D4XU2RENfEM-fsAXOGJ0",
-    description:
-      "• Assisted in troubleshooting 3D modeling issues efficiently and promptly\n" +
-      "• Developed detailed 3D models based on conceptual sketches and specifications\n" +
-      "• Organized storyboards to visualize scenes and design realistic graphics for movies and animated visuals\n" +
-      "• Contributed to the project Aychu (a TV series that got stalled)\n" +
-      "• Specialized in real-time applications and interactive experiences\n" +
-      "• Implemented efficient asset creation pipelines",
-  },
+{
+  title: "3D Environment Artist",
+  year: "Dec 2023 - Present",
+  role: "Engineering Support Associate",
+  company: "SOGECLAIR",
+  logo: "https://media.licdn.com/dms/image/v2/D4E0BAQHgqV6XmICSPg/company-logo_100_100/company-logo_100_100/0/1704211861157/groupesogeclair_logo?e=1750291200&v=beta&t=_516khQ9I8_hPw-ODo1YOlHAyNiXqKw1F5ZIhsBdbUA",
+  description:
+    `Real-Time Simulation Environment Projects
+    • Created simulation environments for bus and train training using Blender and UNIGINE
+    • Designed and modeled buildings, roads, foliage, and props
+    • Applied high-quality textures with Photoshop for consistent visuals
+    • Optimized scenes with LODs and light baking for performance and realism
+    • Developed add-ons for Blender and UNIGINE to streamline workflows
+    • Used Geometry Nodes for procedural and scalable assets
+    • Optimized assets for real-time rendering with reduced poly counts and improved UV layouts
+    • Implemented PBR workflows for realistic materials
+    • Resolved pipeline issues for seamless collaboration
+    • Designed asset pipelines with automated versioning and management tools`,
+},
+{
+  title: "Asset Artist",
+  year: "May 2022 - May 2023",
+  role: "Artist - Asset",
+  company: "MPC",
+  logo: "https://media.licdn.com/dms/image/v2/D4E0BAQH3G1T3TIn9nA/company-logo_100_100/company-logo_100_100/0/1697042590342/mpcvfx_logo?e=1750291200&v=beta&t=fEhawbC3uW16yh7Xes30etxmHLXWoHxOmFh80x6VmIM",
+  description:
+    "Notable Projects\n\n" +
+    "• Ant-Man and the Wasp: Quantumania\n" +
+    "  - Contributed as a Prop and Environment Artist\n" +
+    "  - Focused on high-quality asset creation and optimization for VFX pipelines\n\n" +
+    "• An Atlas Netflix Film\n" +
+    "  - Served as a Technical Artist\n" +
+    "  - Specialized in pipeline automation and asset optimization\n" +
+    "  - Ensured seamless integration between DCC tools and rendering engines\n\n" +
+    "• Monarch: Legacy of Monsters\n" +
+    "  - Worked as an Environment Artist and Technical Artist\n" +
+    "  - Combined artistic skills with technical expertise to create detailed environments\n" +
+    "  - Streamlined workflows for efficient production\n\n" +
+    "Key Technical Artist Contributions\n\n" +
+    "• Developed custom Python scripts to automate repetitive tasks and enhance pipeline efficiency\n" +
+    "• Debugged and resolved technical issues related to material setups, asset imports/exports, and rendering pipelines\n" +
+    "• Collaborated closely with developers and artists to bridge the gap between art and technology, ensuring smooth production workflows",
+},
+{
+  title: "3D Artist",
+  year: "Jan 2020 - Mar 2022",
+  role: "3D Artist",
+  company: "BOP Consultancy and Services",
+  logo: "https://media.licdn.com/dms/image/v2/C510BAQF4QAFc8j8hOA/company-logo_100_100/company-logo_100_100/0/1630575271638?e=1750291200&v=beta&t=Ts42Sz8z9T5uT57jLFdMRVoszU1JvwdWfTI0FUu67aI",
+  description:
+    "• Created architectural visualizations and product designs for client presentations\n" +
+    "• Optimized 3D models for real-time applications and marketing materials\n" +
+    "• Developed efficient workflows for asset creation and management\n" +
+    "• Collaborated with design teams to meet project requirements and deadlines",
+},
+{
+  title: "3D Artist",
+  year: "Jun 2019 - Oct 2019",
+  role: "3D Artist",
+  company: "XECO",
+  logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGaEL7Tzt2tlQ/company-logo_100_100/company-logo_100_100/0/1631304157243?e=1750291200&v=beta&t=rTwnwQaZHDX3cy--YLuLYf_D4XU2RENfEM-fsAXOGJ0",
+  description:
+    "• Assisted in troubleshooting 3D modeling issues efficiently and promptly\n" +
+    "• Developed detailed 3D models based on conceptual sketches and specifications\n" +
+    "• Organized storyboards to visualize scenes and design realistic graphics for movies and animated visuals\n" +
+    "• Contributed to the project Aychu (a TV series that got stalled)\n" +
+    "• Specialized in real-time applications and interactive experiences\n" +
+    "• Implemented efficient asset creation pipelines",
+},
 ]
 
 const certificates = [

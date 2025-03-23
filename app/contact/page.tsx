@@ -78,7 +78,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="py-16 px-4 lg:px-16 bg-zinc-900">
+      {/* <section className="py-16 px-4 lg:px-16 bg-zinc-900">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">Send Me a Message</h2>
 
@@ -141,7 +141,7 @@ export default function ContactPage() {
             </button>
           </form>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="py-12 px-4 lg:px-16 border-t border-zinc-800">

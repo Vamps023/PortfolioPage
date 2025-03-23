@@ -22,10 +22,7 @@ export default function PropBlowTorchProject() {
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">Vintage Blowtorch</h2>
           <p className="text-zinc-400 mb-8">Game-Ready Prop Model</p>
-          {/* <h3 className="text-2xl text-center lg:text-3xl font-bold mb-2 text-[#FF4500]">3D Model</h3> */}
-          <h2 className="text-2xl text-center lg:text-3xl font-bold mb-2 "> 
-            <span className="text-white">3D </span> <span className="text-[#FF4500]">Model</span>
-          </h2>
+
           {/* 3D Viewer */}
           <div className="w-full h-[60vh] relative rounded-lg overflow-hidden bg-zinc-900">
             <BlowTorchViewer />
