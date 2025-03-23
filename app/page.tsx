@@ -28,20 +28,22 @@ export default function Home() {
             <h2 className="text-5xl lg:text-7xl font-bold mb-6">
               <span className="text-white">Swapnil</span> <span className="text-[#FF4500]">Nare</span>
             </h2>
-            <p className="text-2xl text-zinc-300 mb-8">Technical Artist</p>
+            <p className="text-2xl text-zinc-300 mb-8">3D Environment And Technical Artist</p>
             <p className="text-lg text-zinc-400 leading-relaxed mb-10">
-              Passionate 3D artist with over three years of professional experience in the VFX and game industry. My
-              journey has taken me through various roles at prestigious companies, where I've contributed to
-              high-profile projects including Marvel's Ant-Man and the Wasp: Quantumania and Monarch: Legacy of
-              Monsters.
+              I am a passionate 3D artist with over four years of professional experience in the VFX and game industries.
+              My career has spanned various roles at renowned companies, where I’ve contributed to high-profile projects such as 
+              Marvel's Ant-Man and the Wasp: Quantumania and Monarch: Legacy of Monsters.
+              Beyond my creative work, I excel in technical areas, including setting up artist pipelines, developing DCC tools, and shader programming.
+              I’m proficient in Unreal Engine, Unity, and web-based engines like Three.
+              js, bringing a versatile skill set to both artistic and technical challenges.
             </p>
             <div className="flex gap-4">
-              <Link
+              {/* <Link
                 href="/blog"
                 className="px-8 py-3 bg-[#FF4500] text-white rounded-lg hover:bg-[#FF5722] transition-colors"
               >
                 View Blog
-              </Link>
+              </Link> */}
               <Link
                 href="/contact"
                 className="px-8 py-3 border border-zinc-700 text-white rounded-lg hover:bg-zinc-800 transition-colors"
@@ -462,14 +464,14 @@ export default function Home() {
 
 // Sample data with real company logos
 const workExperiences = [
-{
-  title: "3D Environment Artist",
-  year: "Dec 2023 - Present",
-  role: "Engineering Support Associate",
-  company: "SOGECLAIR",
-  logo: "https://media.licdn.com/dms/image/v2/D4E0BAQHgqV6XmICSPg/company-logo_100_100/company-logo_100_100/0/1704211861157/groupesogeclair_logo?e=1750291200&v=beta&t=_516khQ9I8_hPw-ODo1YOlHAyNiXqKw1F5ZIhsBdbUA",
-  description:
-    `Real-Time Simulation Environment Projects
+  {
+    title: "3D Environment Artist",
+    year: "Dec 2023 - Present",
+    role: "Engineering Support Associate",
+    company: "SOGECLAIR",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQHgqV6XmICSPg/company-logo_100_100/company-logo_100_100/0/1704211861157/groupesogeclair_logo?e=1750291200&v=beta&t=_516khQ9I8_hPw-ODo1YOlHAyNiXqKw1F5ZIhsBdbUA",
+    description:
+      `Real-Time Simulation Environment Projects
     • Created simulation environments for bus and train training using Blender and UNIGINE
     • Designed and modeled buildings, roads, foliage, and props
     • Applied high-quality textures with Photoshop for consistent visuals
@@ -480,57 +482,57 @@ const workExperiences = [
     • Implemented PBR workflows for realistic materials
     • Resolved pipeline issues for seamless collaboration
     • Designed asset pipelines with automated versioning and management tools`,
-},
-{
-  title: "Asset Artist",
-  year: "May 2022 - May 2023",
-  role: "Artist - Asset",
-  company: "MPC",
-  logo: "https://media.licdn.com/dms/image/v2/D4E0BAQH3G1T3TIn9nA/company-logo_100_100/company-logo_100_100/0/1697042590342/mpcvfx_logo?e=1750291200&v=beta&t=fEhawbC3uW16yh7Xes30etxmHLXWoHxOmFh80x6VmIM",
-  description:
-    "Notable Projects\n\n" +
-    "• Ant-Man and the Wasp: Quantumania\n" +
-    "  - Contributed as a Prop and Environment Artist\n" +
-    "  - Focused on high-quality asset creation and optimization for VFX pipelines\n\n" +
-    "• An Atlas Netflix Film\n" +
-    "  - Served as a Technical Artist\n" +
-    "  - Specialized in pipeline automation and asset optimization\n" +
-    "  - Ensured seamless integration between DCC tools and rendering engines\n\n" +
-    "• Monarch: Legacy of Monsters\n" +
-    "  - Worked as an Environment Artist and Technical Artist\n" +
-    "  - Combined artistic skills with technical expertise to create detailed environments\n" +
-    "  - Streamlined workflows for efficient production\n\n" +
-    "Key Technical Artist Contributions\n\n" +
-    "• Developed custom Python scripts to automate repetitive tasks and enhance pipeline efficiency\n" +
-    "• Debugged and resolved technical issues related to material setups, asset imports/exports, and rendering pipelines\n" +
-    "• Collaborated closely with developers and artists to bridge the gap between art and technology, ensuring smooth production workflows",
-},
-{
-  title: "3D Artist",
-  year: "Jan 2020 - Mar 2022",
-  role: "3D Artist",
-  company: "BOP Consultancy and Services",
-  logo: "https://media.licdn.com/dms/image/v2/C510BAQF4QAFc8j8hOA/company-logo_100_100/company-logo_100_100/0/1630575271638?e=1750291200&v=beta&t=Ts42Sz8z9T5uT57jLFdMRVoszU1JvwdWfTI0FUu67aI",
-  description:
-    "• Created architectural visualizations and product designs for client presentations\n" +
-    "• Optimized 3D models for real-time applications and marketing materials\n" +
-    "• Developed efficient workflows for asset creation and management\n" +
-    "• Collaborated with design teams to meet project requirements and deadlines",
-},
-{
-  title: "3D Artist",
-  year: "Jun 2019 - Oct 2019",
-  role: "3D Artist",
-  company: "XECO",
-  logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGaEL7Tzt2tlQ/company-logo_100_100/company-logo_100_100/0/1631304157243?e=1750291200&v=beta&t=rTwnwQaZHDX3cy--YLuLYf_D4XU2RENfEM-fsAXOGJ0",
-  description:
-    "• Assisted in troubleshooting 3D modeling issues efficiently and promptly\n" +
-    "• Developed detailed 3D models based on conceptual sketches and specifications\n" +
-    "• Organized storyboards to visualize scenes and design realistic graphics for movies and animated visuals\n" +
-    "• Contributed to the project Aychu (a TV series that got stalled)\n" +
-    "• Specialized in real-time applications and interactive experiences\n" +
-    "• Implemented efficient asset creation pipelines",
-},
+  },
+  {
+    title: "Asset Artist",
+    year: "May 2022 - May 2023",
+    role: "Artist - Asset",
+    company: "MPC",
+    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQH3G1T3TIn9nA/company-logo_100_100/company-logo_100_100/0/1697042590342/mpcvfx_logo?e=1750291200&v=beta&t=fEhawbC3uW16yh7Xes30etxmHLXWoHxOmFh80x6VmIM",
+    description:
+      "Notable Projects\n\n" +
+      "• Ant-Man and the Wasp: Quantumania\n" +
+      "  - Contributed as a Prop and Environment Artist\n" +
+      "  - Focused on high-quality asset creation and optimization for VFX pipelines\n\n" +
+      "• An Atlas Netflix Film\n" +
+      "  - Served as a Technical Artist\n" +
+      "  - Specialized in pipeline automation and asset optimization\n" +
+      "  - Ensured seamless integration between DCC tools and rendering engines\n\n" +
+      "• Monarch: Legacy of Monsters\n" +
+      "  - Worked as an Environment Artist and Technical Artist\n" +
+      "  - Combined artistic skills with technical expertise to create detailed environments\n" +
+      "  - Streamlined workflows for efficient production\n\n" +
+      "Key Technical Artist Contributions\n\n" +
+      "• Developed custom Python scripts to automate repetitive tasks and enhance pipeline efficiency\n" +
+      "• Debugged and resolved technical issues related to material setups, asset imports/exports, and rendering pipelines\n" +
+      "• Collaborated closely with developers and artists to bridge the gap between art and technology, ensuring smooth production workflows",
+  },
+  {
+    title: "3D Artist",
+    year: "Jan 2020 - Mar 2022",
+    role: "3D Artist",
+    company: "BOP Consultancy and Services",
+    logo: "https://media.licdn.com/dms/image/v2/C510BAQF4QAFc8j8hOA/company-logo_100_100/company-logo_100_100/0/1630575271638?e=1750291200&v=beta&t=Ts42Sz8z9T5uT57jLFdMRVoszU1JvwdWfTI0FUu67aI",
+    description:
+      "• Created architectural visualizations and product designs for client presentations\n" +
+      "• Optimized 3D models for real-time applications and marketing materials\n" +
+      "• Developed efficient workflows for asset creation and management\n" +
+      "• Collaborated with design teams to meet project requirements and deadlines",
+  },
+  {
+    title: "3D Artist",
+    year: "Jun 2019 - Oct 2019",
+    role: "3D Artist",
+    company: "XECO",
+    logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGaEL7Tzt2tlQ/company-logo_100_100/company-logo_100_100/0/1631304157243?e=1750291200&v=beta&t=rTwnwQaZHDX3cy--YLuLYf_D4XU2RENfEM-fsAXOGJ0",
+    description:
+      "• Assisted in troubleshooting 3D modeling issues efficiently and promptly\n" +
+      "• Developed detailed 3D models based on conceptual sketches and specifications\n" +
+      "• Organized storyboards to visualize scenes and design realistic graphics for movies and animated visuals\n" +
+      "• Contributed to the project Aychu (a TV series that got stalled)\n" +
+      "• Specialized in real-time applications and interactive experiences\n" +
+      "• Implemented efficient asset creation pipelines",
+  },
 ]
 
 const certificates = [
