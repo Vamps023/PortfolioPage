@@ -236,10 +236,20 @@ export default function Home() {
               <div key={index} className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 backdrop-blur sm:p-8">
                 <div className="flex flex-col gap-8 md:flex-row md:items-start">
                   <div className="flex justify-center md:w-1/4">
-                    <div className="relative h-28 w-28 overflow-hidden rounded-2xl bg-zinc-800 p-3 sm:h-32 sm:w-32">
-                      <Image src={exp.logo || "/placeholder.svg"} alt={exp.company} fill className="object-contain p-2" />
-                    </div>
+                  <div className="relative h-28 w-28 overflow-hidden rounded-2xl bg-zinc-800 p-3 sm:h-32 sm:w-32">
+                    {exp.logo ? (
+                      <Image src={exp.logo} alt={exp.company} fill className="object-contain p-2" />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center rounded-2xl bg-gradient-to-br from-[#FF4500]/70 to-zinc-900 text-lg font-semibold text-white">
+                        {exp.company
+                          .split(" ")
+                          .slice(0, 2)
+                          .map((w) => w[0])
+                          .join("")}
+                      </div>
+                    )}
                   </div>
+                </div>
                   <div className="space-y-4 md:w-3/4">
                     <div className="flex items-center gap-3 text-[#FF4500]">
                       <Briefcase className="h-5 w-5" />
@@ -398,7 +408,7 @@ const workExperiences = [
     year: "Dec 2023 - Present",
     role: "Engineering Support Associate",
     company: "SOGECLAIR",
-    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQHgqV6XmICSPg/company-logo_100_100/company-logo_100_100/0/1704211861157/groupesogeclair_logo?e=1750291200&v=beta&t=_516khQ9I8_hPw-ODo1YOlHAyNiXqKw1F5ZIhsBdbUA",
+    logo: undefined,
     description:
       `Real-Time Simulation Environment Projects
     • Created simulation environments for bus and train training using Blender and UNIGINE
@@ -417,7 +427,7 @@ const workExperiences = [
     year: "May 2022 - May 2023",
     role: "Artist - Asset",
     company: "MPC",
-    logo: "https://media.licdn.com/dms/image/v2/D4E0BAQH3G1T3TIn9nA/company-logo_100_100/company-logo_100_100/0/1697042590342/mpcvfx_logo?e=1750291200&v=beta&t=fEhawbC3uW16yh7Xes30etxmHLXWoHxOmFh80x6VmIM",
+    logo: "https://logo.clearbit.com/mpcvfx.com",
     description:
       "Notable Projects\n\n" +
       "• Ant-Man and the Wasp: Quantumania\n" +
@@ -441,7 +451,7 @@ const workExperiences = [
     year: "Jan 2020 - Mar 2022",
     role: "3D Artist",
     company: "BOP Consultancy and Services",
-    logo: "https://media.licdn.com/dms/image/v2/C510BAQF4QAFc8j8hOA/company-logo_100_100/company-logo_100_100/0/1630575271638?e=1750291200&v=beta&t=Ts42Sz8z9T5uT57jLFdMRVoszU1JvwdWfTI0FUu67aI",
+    logo: undefined,
     description:
       "• Created architectural visualizations and product designs for client presentations\n" +
       "• Optimized 3D models for real-time applications and marketing materials\n" +
@@ -453,7 +463,7 @@ const workExperiences = [
     year: "Jun 2019 - Oct 2019",
     role: "3D Artist",
     company: "XECO",
-    logo: "https://media.licdn.com/dms/image/v2/C4E0BAQGaEL7Tzt2tlQ/company-logo_100_100/company-logo_100_100/0/1631304157243?e=1750291200&v=beta&t=rTwnwQaZHDX3cy--YLuLYf_D4XU2RENfEM-fsAXOGJ0",
+    logo: undefined,
     description:
       "• Assisted in troubleshooting 3D modeling issues efficiently and promptly\n" +
       "• Developed detailed 3D models based on conceptual sketches and specifications\n" +
