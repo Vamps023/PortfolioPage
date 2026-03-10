@@ -68,9 +68,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,69,0,0.18),transparent_30%),radial-gradient(circle_at_80%_10%,rgba(59,130,246,0.12),transparent_25%)]" />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 lg:px-16 lg:py-28">
-          <div className="mb-8 flex items-center justify-between rounded-full border border-white/10 bg-white/5 px-4 py-3 backdrop-blur">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(255,69,0,0.25),transparent_32%),radial-gradient(circle_at_82%_12%,rgba(59,130,246,0.18),transparent_30%),radial-gradient(circle_at_50%_80%,rgba(255,255,255,0.06),transparent_35%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/40" />
+        <div className="relative mx-auto max-w-[1200px] px-6 py-16 lg:px-12 lg:py-28 xl:max-w-[1400px]">
+          <div className="mb-10 flex flex-col items-start gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-3 backdrop-blur md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-3 text-sm text-zinc-300">
               <Sparkles className="h-4 w-4 text-[#FF4500]" />
               Technical Artist Portfolio
@@ -84,19 +85,19 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-            <div className="space-y-8">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300 backdrop-blur">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] xl:grid-cols-[1.15fr_0.85fr]">
+            <div className="space-y-9">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300 backdrop-blur shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
                 <Briefcase className="h-4 w-4 text-[#FF4500]" />
                 Environment Art • Technical Art • Tool Development
               </div>
               <div className="space-y-5">
-                <h1 className="text-5xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+                <h1 className="text-5xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl xl:text-[72px] xl:leading-[1.05]">
                   Creating
                   <span className="block text-[#FF4500]">real-time worlds</span>
                   with art and systems thinking.
                 </h1>
-                <p className="max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">
+                <p className="max-w-3xl text-lg leading-8 text-zinc-300 sm:text-xl">
                   I build production-ready 3D environments, assets, and artist workflows for games, simulation, and VFX.
                   My work blends visual storytelling with technical problem solving across Blender, Unreal Engine, Unity,
                   UNIGINE, and web-based 3D.
@@ -118,23 +119,23 @@ export default function Home() {
                 </Link>
               </div>
               <div className="grid gap-4 sm:grid-cols-3">
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
                   <p className="text-3xl font-semibold text-white">4+</p>
                   <p className="mt-1 text-sm text-zinc-400">Years in games, simulation, and VFX</p>
                 </div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
                   <p className="text-3xl font-semibold text-white">10+</p>
                   <p className="mt-1 text-sm text-zinc-400">Portfolio projects and process breakdowns</p>
                 </div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
                   <p className="text-3xl font-semibold text-white">3D + Tools</p>
                   <p className="mt-1 text-sm text-zinc-400">Art direction backed by pipeline thinking</p>
                 </div>
               </div>
             </div>
             <div className="relative">
-              <div className="relative mx-auto max-w-md overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-950/60 p-3 shadow-2xl shadow-[#FF4500]/10 backdrop-blur">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem]">
+              <div className="relative mx-auto max-w-lg overflow-hidden rounded-[2.2rem] border border-white/10 bg-zinc-950/70 p-3 shadow-[0_25px_70px_rgba(0,0,0,0.55)] shadow-[#FF4500]/15 backdrop-blur">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.6rem]">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1716150100804.jpg-B9HtwdkKiiDbacnpz1OalncFT03jxF.jpeg"
                     alt="Swapnil Nare"
@@ -142,9 +143,9 @@ export default function Home() {
                     className="object-cover object-center"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
                 </div>
-                <div className="absolute bottom-8 left-8 right-8 rounded-2xl border border-white/10 bg-black/45 p-4 backdrop-blur">
+                <div className="absolute bottom-8 left-8 right-8 rounded-2xl border border-white/10 bg-black/55 p-4 backdrop-blur">
                   <p className="text-sm uppercase tracking-[0.2em] text-zinc-400">Current focus</p>
                   <p className="mt-2 text-lg font-semibold text-white">
                     Environment art, real-time workflows, and artist-facing tool development.
