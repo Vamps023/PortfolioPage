@@ -6,9 +6,9 @@ import { Inter } from "next/font/google"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Swapnil Nare - Technical Artist Portfolio",
-  description: "Technical Artist Portfolio showcasing 3D environment art and modeling",
-    generator: 'v0.dev'
+  title: "Swapnil Nare | Technical Artist Portfolio",
+  description: "Technical Artist portfolio featuring environment art, real-time workflows, tool development, and production-ready 3D projects.",
+  generator: "Next.js",
 }
 
 export default function RootLayout({
@@ -16,13 +16,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-black text-white`}>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} bg-black text-white antialiased`}>{children}</body>
     </html>
   )
 }
-
-
-
-import './globals.css'

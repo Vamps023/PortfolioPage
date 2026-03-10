@@ -1,323 +1,267 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Linkedin, Mail, Phone, Palette } from "lucide-react"
+import { ArrowRight, Briefcase, ExternalLink, Github, Linkedin, Mail, Phone, Palette, Sparkles } from "lucide-react"
+
+const featuredProjects = [
+  {
+    href: "/projects/buggy",
+    title: "Buggy (Game Ready)",
+    subtitle: "UE5 environment scene and vehicle asset built for presentation and breakdown.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-1.jpg-KWZwWjPlY3ofzCgCIo4WDBU0MAu99P.jpeg",
+    featured: true,
+  },
+  {
+    href: "/projects/buggy-technical-breakdown",
+    title: "Buggy Technical Breakdown",
+    subtitle: "Modeling, texturing, and technical decision-making.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-14.jpg-Ey3eyiRAPRfpspaauC9I7HP7ovP6Xg.jpeg",
+    featured: false,
+  },
+  {
+    href: "/projects/deadpool-bust",
+    title: "Deadpool 3D Bust",
+    subtitle: "Print-ready character sculpt with presentation renders.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-2%20%282%29.jpg-QW5MPsfQj70nCdJJw9aRgIrY4VtIEA.jpeg",
+    featured: false,
+  },
+  {
+    href: "/projects/wasteland-sheriff",
+    title: "Wasteland Sheriff",
+    subtitle: "Stylized fan-art weapon created with production-minded detailing.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-artboard-1.jpg-iWiuSFYm6iD6vccDkCzwVZErB8kf5N.jpeg",
+    featured: false,
+  },
+  {
+    href: "/projects/prop-blowtorch",
+    title: "Vintage Blowtorch",
+    subtitle: "Interactive web-presented prop using Three.js rendering.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-render1.jpg-UkG2aKcOIk6a9zYjMf8md9lK8HrT31.jpeg",
+    featured: false,
+  },
+  {
+    href: "/projects/antman",
+    title: "Ant-Man and the Wasp: Quantumania",
+    subtitle: "Feature-film production experience in environment props work.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-screenshot-2023-05-16-154557.jpg-FEFroaW7oNqspjD0Bgwyi4JlVUAaEL.jpeg",
+    featured: false,
+  },
+]
+
+const tools = [
+  {
+    title: "Model Validator",
+    description:
+      "Real-time mesh validation tool for Blender that streamlines workflow by seamlessly validating meshes during the modeling process.",
+    tags: ["Python", "Blender"],
+    href: "https://github.com/Vamps023/ModelValidator",
+  },
+  {
+    title: "Blender Unigine Exporter",
+    description:
+      "Specialized tool for exporting mesh files from Blender directly to Unigine, maintaining material properties and optimizing workflow.",
+    tags: ["Python", "Blender", "Unigine"],
+    href: "https://github.com/Vamps023/blenderUnigine",
+  },
+]
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
-      {/* Hero Section with Integrated Photo */}
-      <section className="relative min-h-[90vh] flex items-center">
-        {/* Background gradient overlay */}
-        <div className="absolute inset-0  from-black via-black/90 to-transparent z-10"></div>
-
-        {/* Photo background with fade effect */}
-        <div className="absolute right-0 top-0 w-full h-full lg:w-1/3 overflow-hidden">
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1716150100804.jpg-B9HtwdkKiiDbacnpz1OalncFT03jxF.jpeg"
-            alt="Swapnil Nare"
-            fill
-            className="object-cover object-center opacity-40 lg:opacity-60"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-black/40 to-black"></div>
-        </div>
-
-        {/* Content */}
-        <div className="max-w-7xl mx-auto px-4 lg:px-16 w-full relative z-20">
-          <div className="max-w-2xl">
-            <h2 className="text-5xl lg:text-7xl font-bold mb-6">
-              <span className="text-white">Swapnil</span> <span className="text-[#FF4500]">Nare</span>
-            </h2>
-            <p className="text-2xl text-zinc-300 mb-8">3D Environment And Technical Artist</p>
-            <p className="text-lg text-zinc-400 leading-relaxed mb-10">
-              I am a passionate 3D artist with over four years of professional experience in the VFX and game industries.
-              My career has spanned various roles at renowned companies, where I’ve contributed to high-profile projects such as 
-              Marvel's Ant-Man and the Wasp: Quantumania and Monarch: Legacy of Monsters.
-              Beyond my creative work, I excel in technical areas, including setting up artist pipelines, developing DCC tools, and shader programming.
-              I’m proficient in Unreal Engine, Unity, and web-based engines like Three.
-              js, bringing a versatile skill set to both artistic and technical challenges.
-            </p>
-            <div className="flex gap-4">
-              {/* <Link
-                href="/blog"
-                className="px-8 py-3 bg-[#FF4500] text-white rounded-lg hover:bg-[#FF5722] transition-colors"
-              >
-                View Blog
-              </Link> */}
-              <Link
-                href="/contact"
-                className="px-8 py-3 border border-zinc-700 text-white rounded-lg hover:bg-zinc-800 transition-colors"
-              >
-                Contact Me
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,69,0,0.18),transparent_30%),radial-gradient(circle_at_80%_10%,rgba(59,130,246,0.12),transparent_25%)]" />
+        <div className="relative mx-auto max-w-7xl px-4 py-20 lg:px-16 lg:py-28">
+          <div className="mb-8 flex items-center justify-between rounded-full border border-white/10 bg-white/5 px-4 py-3 backdrop-blur">
+            <div className="flex items-center gap-3 text-sm text-zinc-300">
+              <Sparkles className="h-4 w-4 text-[#FF4500]" />
+              Technical Artist Portfolio
+            </div>
+            <div className="hidden items-center gap-6 text-sm text-zinc-400 md:flex">
+              <Link href="/blog" className="transition hover:text-white">
+                Blog
+              </Link>
+              <Link href="/contact" className="transition hover:text-white">
+                Contact
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Portfolio Grid */}
-      <section className="py-20 px-4 lg:px-16 bg-zinc-900">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-16 text-center">
-            <span className="text-[#FF4500]">Portfolio</span>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Featured Project */}
-            <Link href="/projects/buggy" className="group lg:col-span-2 lg:row-span-2">
-              <div className="relative overflow-hidden rounded-lg aspect-[16/9] lg:aspect-[16/10]">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-1.jpg-KWZwWjPlY3ofzCgCIo4WDBU0MAu99P.jpeg"
-                  alt="Game Ready Buggy"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">Buggy (Game Ready)</h3>
-                  <p className="text-zinc-300 text-sm">UE5 Environment and Vehicle Asset</p>
-                </div>
+          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300 backdrop-blur">
+                <Briefcase className="h-4 w-4 text-[#FF4500]" />
+                Environment Art • Technical Art • Tool Development
               </div>
-            </Link>
-
-            <Link href="/projects/buggy-technical-breakdown" className="group">
-              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-14.jpg-Ey3eyiRAPRfpspaauC9I7HP7ovP6Xg.jpeg"
-                  alt="Buggy Technical Breakdown"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Buggy Technical Breakdown</h3>
-                  <p className="text-zinc-300 text-sm">Modeling & Texturing Process</p>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/projects/deadpool-bust" className="group">
-              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-2%20%282%29.jpg-QW5MPsfQj70nCdJJw9aRgIrY4VtIEA.jpeg"
-                  alt="Deadpool 3D Bust"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Deadpool 3D Bust</h3>
-                  <p className="text-zinc-300 text-sm">3D Print-Ready Character Bust</p>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/projects/wasteland-sheriff" className="group">
-              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-artboard-1.jpg-iWiuSFYm6iD6vccDkCzwVZErB8kf5N.jpeg"
-                  alt="Wasteland Sheriff"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Wasteland Sheriff</h3>
-                  <p className="text-zinc-300 text-sm">Valorant Fan Art - Game Weapon</p>
-                </div>
-              </div>
-            </Link>
-
-            <Link href="/projects/prop-blowtorch" className="group">
-              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-render1.jpg-UkG2aKcOIk6a9zYjMf8md9lK8HrT31.jpeg"
-                  alt="Vintage Blowtorch"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Vintage Blowtorch</h3>
-                  <p className="text-zinc-300 text-sm">Game-Ready Prop Model</p>
-                </div>
-              </div>
-            </Link>
-
-            {/* <Link href="/projects/monarch" className="group">
-              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                <Image
-                  src="/placeholder.svg?height=300&width=400"
-                  alt="Monarch: Legacy of Monsters"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Monarch: Legacy of Monsters</h3>
-                  <p className="text-zinc-300 text-sm">Asset and Technical Artist</p>
-                </div>
-              </div>
-            </Link> */}
-
-            <Link href="/projects/antman" className="group">
-              <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/swapnil-nare-screenshot-2023-05-16-154557.jpg-FEFroaW7oNqspjD0Bgwyi4JlVUAaEL.jpeg"
-                  alt="Ant-Man and the Wasp: Quantumania"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                <div className="absolute bottom-0 left-0 p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">Ant-Man and the Wasp: Quantumania</h3>
-                  <p className="text-zinc-300 text-sm">Environment Props Artist</p>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Tools Section */}
-      <section className="py-20 px-4 lg:px-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-16 text-center">
-            <span className="text-[#FF4500]">Technical Tools</span>
-          </h2>
-
-          <div className="mb-12">
-            <p className="text-xl text-center text-zinc-300 max-w-3xl mx-auto">
-              Specialized tools and plugins I've developed to enhance workflows for technical artists and 3D
-              professionals.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-zinc-900 rounded-lg overflow-hidden group hover:bg-zinc-800 transition-all duration-300 hover:translate-y-[-5px]">
-              <div className="p-8">
-                <div className="w-16 h-16 bg-[#FF4500]/20 rounded-lg flex items-center justify-center mb-6">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#FF4500"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold mb-3">Model Validator</h3>
-                <p className="text-zinc-400 mb-4">
-                  Real-time mesh validation tool for Blender that streamlines workflow by seamlessly validating meshes
-                  during the modeling process.
+              <div className="space-y-5">
+                <h1 className="text-5xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+                  Creating
+                  <span className="block text-[#FF4500]">real-time worlds</span>
+                  with art and systems thinking.
+                </h1>
+                <p className="max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">
+                  I build production-ready 3D environments, assets, and artist workflows for games, simulation, and VFX.
+                  My work blends visual storytelling with technical problem solving across Blender, Unreal Engine, Unity,
+                  UNIGINE, and web-based 3D.
                 </p>
-                <div className="flex gap-2">
-                  <span className="text-xs bg-zinc-800 px-3 py-1 rounded-full">Python</span>
-                  <span className="text-xs bg-zinc-800 px-3 py-1 rounded-full">Blender</span>
-                </div>
-                <a
-                  href="https://github.com/Vamps023/ModelValidator"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-block text-[#FF4500] hover:underline"
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/projects/buggy"
+                  className="inline-flex items-center gap-2 rounded-full bg-[#FF4500] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#ff5d22]"
                 >
-                  View on GitHub →
-                </a>
+                  View Featured Project
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  Contact Me
+                </Link>
+              </div>
+              <div className="grid gap-4 sm:grid-cols-3">
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+                  <p className="text-3xl font-semibold text-white">4+</p>
+                  <p className="mt-1 text-sm text-zinc-400">Years in games, simulation, and VFX</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+                  <p className="text-3xl font-semibold text-white">10+</p>
+                  <p className="mt-1 text-sm text-zinc-400">Portfolio projects and process breakdowns</p>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+                  <p className="text-3xl font-semibold text-white">3D + Tools</p>
+                  <p className="mt-1 text-sm text-zinc-400">Art direction backed by pipeline thinking</p>
+                </div>
               </div>
             </div>
-
-            <div className="bg-zinc-900 rounded-lg overflow-hidden group hover:bg-zinc-800 transition-all duration-300 hover:translate-y-[-5px]">
-              <div className="p-8">
-                <div className="w-16 h-16 bg-[#FF4500]/20 rounded-lg flex items-center justify-center mb-6">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#FF4500"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                  </svg>
+            <div className="relative">
+              <div className="relative mx-auto max-w-md overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-950/60 p-3 shadow-2xl shadow-[#FF4500]/10 backdrop-blur">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem]">
+                  <Image
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1716150100804.jpg-B9HtwdkKiiDbacnpz1OalncFT03jxF.jpeg"
+                    alt="Swapnil Nare"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Blender Unigine Exporter</h3>
-                <p className="text-zinc-400 mb-4">
-                  Specialized tool for exporting mesh files from Blender directly to Unigine, maintaining material
-                  properties and optimizing workflow.
-                </p>
-                <div className="flex gap-2">
-                  <span className="text-xs bg-zinc-800 px-3 py-1 rounded-full">Python</span>
-                  <span className="text-xs bg-zinc-800 px-3 py-1 rounded-full">Blender</span>
-                  <span className="text-xs bg-zinc-800 px-3 py-1 rounded-full">Unigine</span>
+                <div className="absolute bottom-8 left-8 right-8 rounded-2xl border border-white/10 bg-black/45 p-4 backdrop-blur">
+                  <p className="text-sm uppercase tracking-[0.2em] text-zinc-400">Current focus</p>
+                  <p className="mt-2 text-lg font-semibold text-white">
+                    Environment art, real-time workflows, and artist-facing tool development.
+                  </p>
                 </div>
-                <a
-                  href="https://github.com/Vamps023/blenderUnigine"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-block text-[#FF4500] hover:underline"
-                >
-                  View on GitHub →
-                </a>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-16 text-center">
-            <a
-              href="https://github.com/Vamps023"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3 bg-[#FF4500] text-white rounded-lg hover:bg-[#FF5722] transition-colors"
-            >
-              View All GitHub Projects
-            </a>
+      <section className="px-4 py-20 lg:px-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#FF4500]">Selected Work</p>
+              <h2 className="mt-3 text-4xl font-bold text-white sm:text-5xl">Projects built for visuals, performance, and storytelling.</h2>
+            </div>
+            <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-zinc-300 transition hover:text-white">
+              Read breakdowns
+              <ExternalLink className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {featuredProjects.map((project, index) => (
+              <Link
+                key={project.href}
+                href={project.href}
+                className={`group ${index === 0 ? "lg:col-span-2 lg:row-span-2" : ""}`}
+              >
+                <div className={`relative overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900/70 ${index === 0 ? "aspect-[16/10]" : "aspect-[4/3]"}`}>
+                  <Image src={project.image} alt={project.title} fill className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90" />
+                  {project.featured ? (
+                    <div className="absolute left-0 top-0 m-6 rounded-full border border-white/10 bg-black/40 px-3 py-1 text-xs font-medium text-zinc-200 backdrop-blur">
+                      Featured Project
+                    </div>
+                  ) : null}
+                  <div className="absolute bottom-0 left-0 p-6 sm:p-8">
+                    <h3 className={`mb-2 font-bold text-white ${index === 0 ? "text-2xl sm:text-3xl" : "text-xl"}`}>{project.title}</h3>
+                    <p className="max-w-xl text-sm text-zinc-300 sm:text-base">{project.subtitle}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Work Experience */}
-      <section className="py-20 px-4 lg:px-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-16 text-center">
-            <span className="text-[#FF4500]">Work Experience</span>
-          </h2>
+      <section className="px-4 py-20 lg:px-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#FF4500]">Technical Tools</p>
+            <h2 className="mt-3 text-4xl font-bold text-white sm:text-5xl">Workflow-focused tools that support artists and production teams.</h2>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {tools.map((tool) => (
+              <div key={tool.title} className="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]">
+                <div className="mb-6 inline-flex rounded-2xl bg-[#FF4500]/15 p-4 text-[#FF4500]">
+                  <Github className="h-8 w-8" />
+                </div>
+                <h3 className="mb-3 text-xl font-bold">{tool.title}</h3>
+                <p className="mb-5 text-zinc-400">{tool.description}</p>
+                <div className="mb-6 flex flex-wrap gap-2">
+                  {tool.tags.map((tag) => (
+                    <span key={tag} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-300">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a href={tool.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-[#FF4500] hover:text-[#ff6b34]">
+                  View on GitHub
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="space-y-12">
+      <section className="px-4 py-20 lg:px-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 max-w-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#FF4500]">Experience</p>
+            <h2 className="mt-3 text-4xl font-bold text-white sm:text-5xl">Experience across VFX, real-time simulation, and technical production.</h2>
+          </div>
+          <div className="space-y-8">
             {workExperiences.map((exp, index) => (
-              <div key={index} className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="w-full md:w-1/4 flex justify-center">
-                  <div className="w-32 h-32 relative rounded-lg overflow-hidden bg-zinc-800 p-4">
-                    <Image src={exp.logo || "/placeholder.svg"} alt={exp.company} fill className="object-contain p-2" />
-                  </div>
-                </div>
-                <div className="w-full md:w-3/4 space-y-4">
-                  <h3 className="text-2xl font-semibold">{exp.title}</h3>
-                  <div className="flex flex-wrap gap-x-8 gap-y-2 text-zinc-400">
-                    <div>
-                      <p className="text-[#FF4500]">Period</p>
-                      <p>{exp.year}</p>
-                    </div>
-                    <div>
-                      <p className="text-[#FF4500]">Role</p>
-                      <p>{exp.role}</p>
-                    </div>
-                    <div>
-                      <p className="text-[#FF4500]">Company</p>
-                      <p>{exp.company}</p>
+              <div key={index} className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 backdrop-blur sm:p-8">
+                <div className="flex flex-col gap-8 md:flex-row md:items-start">
+                  <div className="flex justify-center md:w-1/4">
+                    <div className="relative h-28 w-28 overflow-hidden rounded-2xl bg-zinc-800 p-3 sm:h-32 sm:w-32">
+                      <Image src={exp.logo || "/placeholder.svg"} alt={exp.company} fill className="object-contain p-2" />
                     </div>
                   </div>
-                  <p className="text-zinc-300">{exp.description}</p>
+                  <div className="space-y-4 md:w-3/4">
+                    <div className="flex items-center gap-3 text-[#FF4500]">
+                      <Briefcase className="h-5 w-5" />
+                      <span className="text-sm font-semibold uppercase tracking-[0.2em]">Professional Experience</span>
+                    </div>
+                    <h3 className="text-2xl font-semibold">{exp.title}</h3>
+                    <div className="flex flex-wrap gap-x-8 gap-y-3 text-zinc-400">
+                      <div>
+                        <p className="text-[#FF4500]">Period</p>
+                        <p>{exp.year}</p>
+                      </div>
+                      <div>
+                        <p className="text-[#FF4500]">Role</p>
+                        <p>{exp.role}</p>
+                      </div>
+                      <div>
+                        <p className="text-[#FF4500]">Company</p>
+                        <p>{exp.company}</p>
+                      </div>
+                    </div>
+                    <p className="whitespace-pre-line text-zinc-300">{exp.description}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -325,22 +269,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certificates & Education */}
-      <section className="py-20 px-4 lg:px-16 bg-zinc-900">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Certificates */}
+      <section className="px-4 py-20 lg:px-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
             <div>
-              <h2 className="text-3xl font-bold mb-12 text-center lg:text-left">
+              <h2 className="mb-12 text-center text-3xl font-bold lg:text-left">
                 <span className="text-[#FF4500]">Certificates</span>
               </h2>
-
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {certificates.map((cert, index) => (
-                  <div key={index} className="flex items-start gap-6 bg-zinc-800 p-6 rounded-lg">
-                    <div className="w-12 h-12 rounded-full bg-[#FF4500] flex items-center justify-center text-white font-bold">
-                      {index + 1}
-                    </div>
+                  <div key={index} className="flex items-start gap-6 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF4500] font-bold text-white">{index + 1}</div>
                     <div>
                       <p className="text-zinc-400">{cert.year}</p>
                       <h3 className="text-xl font-semibold">{cert.title}</h3>
@@ -350,24 +289,19 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
-            {/* Education */}
             <div>
-              <h2 className="text-3xl font-bold mb-12 text-center lg:text-left">
+              <h2 className="mb-12 text-center text-3xl font-bold lg:text-left">
                 <span className="text-[#FF4500]">Education</span>
               </h2>
-
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {education.map((edu, index) => (
-                  <div key={index} className="flex items-start gap-6 bg-zinc-800 p-6 rounded-lg">
-                    <div className="w-12 h-12 rounded-full bg-[#FF4500] flex items-center justify-center text-white font-bold">
-                      {index + 1}
-                    </div>
+                  <div key={index} className="flex items-start gap-6 rounded-[2rem] border border-white/10 bg-white/[0.03] p-6">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF4500] font-bold text-white">{index + 1}</div>
                     <div>
                       <p className="text-zinc-400">{edu.year}</p>
                       <h3 className="text-xl font-semibold">{edu.institution}</h3>
                       <p className="text-zinc-500">{edu.degree}</p>
-                      <p className="text-zinc-400 mt-2">{edu.description}</p>
+                      <p className="mt-2 text-zinc-400">{edu.description}</p>
                     </div>
                   </div>
                 ))}
@@ -377,83 +311,78 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 px-4 lg:px-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-16 text-center">
-            <span className="text-[#FF4500]">Get In Touch</span>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="px-4 py-20 lg:px-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#FF4500]">Let&apos;s Connect</p>
+            <h2 className="mt-3 text-4xl font-bold text-white sm:text-5xl">Available for collaboration, freelance work, and technical art opportunities.</h2>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             <a
               href="https://www.linkedin.com/in/swapnilnare/"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-zinc-900 p-8 rounded-lg flex flex-col items-center hover:bg-zinc-800 transition-all hover:translate-y-[-5px]"
+              className="flex flex-col items-center rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-center transition-all hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]"
             >
-              <Linkedin className="w-12 h-12 text-[#0A66C2] mb-4" />
+              <Linkedin className="mb-4 h-12 w-12 text-[#0A66C2]" />
               <h3 className="text-xl font-semibold">LinkedIn</h3>
-              <p className="text-zinc-400 text-sm text-center mt-2">Connect with me professionally</p>
+              <p className="mt-2 text-sm text-zinc-400">Connect with me professionally</p>
             </a>
-
             <a
               href="https://www.artstation.com/vamps23"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-zinc-900 p-8 rounded-lg flex flex-col items-center hover:bg-zinc-800 transition-all hover:translate-y-[-5px]"
+              className="flex flex-col items-center rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-center transition-all hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]"
             >
-              <Palette className="w-12 h-12 text-[#13AFF0] mb-4" />
+              <Palette className="mb-4 h-12 w-12 text-[#13AFF0]" />
               <h3 className="text-xl font-semibold">ArtStation</h3>
-              <p className="text-zinc-400 text-sm text-center mt-2">View my portfolio</p>
+              <p className="mt-2 text-sm text-zinc-400">View my portfolio</p>
             </a>
-
             <a
               href="mailto:Swapnilnare007@gmail.com"
-              className="bg-zinc-900 p-8 rounded-lg flex flex-col items-center hover:bg-zinc-800 transition-all hover:translate-y-[-5px]"
+              className="flex flex-col items-center rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-center transition-all hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]"
             >
-              <Mail className="w-12 h-12 text-[#EA4335] mb-4" />
+              <Mail className="mb-4 h-12 w-12 text-[#EA4335]" />
               <h3 className="text-xl font-semibold">Email</h3>
-              <p className="text-zinc-400 text-sm text-center mt-2">Swapnilnare007@gmail.com</p>
+              <p className="mt-2 text-sm text-zinc-400">Swapnilnare007@gmail.com</p>
             </a>
-
             <a
               href="tel:+918766569006"
-              className="bg-zinc-900 p-8 rounded-lg flex flex-col items-center hover:bg-zinc-800 transition-all hover:translate-y-[-5px]"
+              className="flex flex-col items-center rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 text-center transition-all hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]"
             >
-              <Phone className="w-12 h-12 text-[#4CAF50] mb-4" />
+              <Phone className="mb-4 h-12 w-12 text-[#4CAF50]" />
               <h3 className="text-xl font-semibold">Phone</h3>
-              <p className="text-zinc-400 text-sm text-center mt-2">+91 8766569006</p>
+              <p className="mt-2 text-sm text-zinc-400">+91 8766569006</p>
             </a>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-4 lg:px-16 text-center border-t border-zinc-800">
-        <div className="max-w-7xl mx-auto">
+      <footer className="border-t border-white/10 px-4 py-12 text-center lg:px-16">
+        <div className="mx-auto max-w-7xl">
           <p className="text-zinc-400">© {new Date().getFullYear()} Swapnil Nare. All rights reserved.</p>
-          <div className="flex justify-center gap-6 mt-6">
+          <div className="mt-6 flex justify-center gap-6">
             <a
               href="https://www.linkedin.com/in/swapnilnare/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-[#FF4500] transition-colors"
+              className="text-zinc-400 transition-colors hover:text-[#FF4500]"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="h-5 w-5" />
             </a>
             <a
               href="https://www.artstation.com/vamps23"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-[#FF4500] transition-colors"
+              className="text-zinc-400 transition-colors hover:text-[#FF4500]"
             >
-              <Palette className="w-5 h-5" />
+              <Palette className="h-5 w-5" />
             </a>
-            <a href="mailto:Swapnilnare007@gmail.com" className="text-zinc-400 hover:text-[#FF4500] transition-colors">
-              <Mail className="w-5 h-5" />
+            <a href="mailto:Swapnilnare007@gmail.com" className="text-zinc-400 transition-colors hover:text-[#FF4500]">
+              <Mail className="h-5 w-5" />
             </a>
-            <a href="tel:+918766569006" className="text-zinc-400 hover:text-[#FF4500] transition-colors">
-              <Phone className="w-5 h-5" />
+            <a href="tel:+918766569006" className="text-zinc-400 transition-colors hover:text-[#FF4500]">
+              <Phone className="h-5 w-5" />
             </a>
           </div>
         </div>
@@ -548,6 +477,7 @@ const education = [
     year: "2016-2019",
     institution: "Frameboxx",
     degree: "BSc in Animation, Modeling",
+    description: "Focused on modeling, environment creation, and production-ready 3D workflows.",
   },
 ]
 
