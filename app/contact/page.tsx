@@ -4,176 +4,96 @@ import { Linkedin, Mail, Phone, Palette, ArrowLeft, Send } from "lucide-react"
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-black text-white">
-      {/* Header */}
-      <header className="py-8 px-4 lg:px-16 border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors">
-            <ArrowLeft className="w-5 h-5" />
-            <span>Back to Portfolio</span>
-          </Link>
-          <h1 className="text-2xl font-bold">Swapnil Nare</h1>
-        </div>
-      </header>
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(255,69,0,0.25),transparent_32%),radial-gradient(circle_at_82%_12%,rgba(59,130,246,0.18),transparent_30%),radial-gradient(circle_at_50%_80%,rgba(255,255,255,0.06),transparent_35%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/40" />
 
-      {/* Hero Section */}
-      <section className="py-16 px-4 lg:px-16 bg-gradient-to-b from-zinc-900 to-black">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-xl text-zinc-400 max-w-2xl mx-auto">
-            I'm always interested in hearing about new projects and opportunities. Feel free to reach out through any of
-            the channels below.
-          </p>
-        </div>
-      </section>
+        {/* Header */}
+        <header className="relative z-10 border-b border-white/10 px-4 py-6 backdrop-blur lg:px-12">
+          <div className="mx-auto flex max-w-7xl items-center justify-between">
+            <Link href="/" className="flex items-center gap-2 text-zinc-300 transition hover:text-white">
+              <ArrowLeft className="h-5 w-5" />
+              <span>Back to Portfolio</span>
+            </Link>
+            <h1 className="text-xl font-semibold text-white">Swapnil Nare</h1>
+          </div>
+        </header>
 
-      {/* Contact Methods */}
-      <section className="py-16 px-4 lg:px-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <a
+        {/* Hero */}
+        <section className="relative z-10 px-4 py-16 lg:px-12 lg:py-24">
+          <div className="mx-auto max-w-5xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#FF4500]">Let&apos;s Connect</p>
+            <h2 className="mt-3 text-4xl font-bold text-white sm:text-5xl">
+              Available for collaboration, freelance work, and technical art opportunities.
+            </h2>
+            <p className="mt-4 text-lg text-zinc-300">
+              Reach out through any channel below—I respond fastest via email or LinkedIn.
+            </p>
+          </div>
+        </section>
+
+        {/* Contact Methods */}
+        <section className="relative z-10 px-4 pb-20 lg:px-12">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <ContactCard
               href="https://www.linkedin.com/in/swapnilnare/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-zinc-900 p-8 rounded-lg flex flex-col items-center hover:bg-zinc-800 transition-colors"
-            >
-              <Linkedin className="w-16 h-16 text-[#0A66C2] mb-6" />
-              <h3 className="text-xl font-semibold">LinkedIn</h3>
-              <p className="text-zinc-400 text-center mt-2">Connect with me professionally</p>
-              <span className="mt-4 text-sm text-[#FF4500]">linkedin.com/in/swapnilnare</span>
-            </a>
-
-            <a
+              title="LinkedIn"
+              subtitle="Connect with me professionally"
+              icon={<Linkedin className="h-12 w-12 text-[#0A66C2]" />}
+            />
+            <ContactCard
               href="https://www.artstation.com/vamps23"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-zinc-900 p-8 rounded-lg flex flex-col items-center hover:bg-zinc-800 transition-colors"
-            >
-              <Palette className="w-16 h-16 text-[#13AFF0] mb-6" />
-              <h3 className="text-xl font-semibold">ArtStation</h3>
-              <p className="text-zinc-400 text-center mt-2">View my portfolio</p>
-              <span className="mt-4 text-sm text-[#FF4500]">artstation.com/vamps23</span>
-            </a>
-
-            <a
+              title="ArtStation"
+              subtitle="View my portfolio"
+              icon={<Palette className="h-12 w-12 text-[#13AFF0]" />}
+            />
+            <ContactCard
               href="mailto:Swapnilnare007@gmail.com"
-              className="bg-zinc-900 p-8 rounded-lg flex flex-col items-center hover:bg-zinc-800 transition-colors"
-            >
-              <Mail className="w-16 h-16 text-[#EA4335] mb-6" />
-              <h3 className="text-xl font-semibold">Email</h3>
-              <p className="text-zinc-400 text-center mt-2">Send me an email</p>
-              <span className="mt-4 text-sm text-[#FF4500]">Swapnilnare007@gmail.com</span>
-            </a>
-
-            <a
+              title="Email"
+              subtitle="Swapnilnare007@gmail.com"
+              icon={<Mail className="h-12 w-12 text-[#EA4335]" />}
+            />
+            <ContactCard
               href="tel:+918766569006"
-              className="bg-zinc-900 p-8 rounded-lg flex flex-col items-center hover:bg-zinc-800 transition-colors"
-            >
-              <Phone className="w-16 h-16 text-[#4CAF50] mb-6" />
-              <h3 className="text-xl font-semibold">Phone</h3>
-              <p className="text-zinc-400 text-center mt-2">Give me a call</p>
-              <span className="mt-4 text-sm text-[#FF4500]">+91 8766569006</span>
-            </a>
+              title="Phone"
+              subtitle="+91 8766569006"
+              icon={<Phone className="h-12 w-12 text-[#4CAF50]" />}
+            />
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      {/* Contact Form */}
-      {/* <section className="py-16 px-4 lg:px-16 bg-zinc-900">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Send Me a Message</h2>
-
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF4500]"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF4500]"
-                  placeholder="Your email"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF4500]"
-                placeholder="Subject of your message"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={6}
-                className="w-full px-4 py-3 bg-zinc-800 border border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF4500]"
-                placeholder="Your message"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full md:w-auto px-8 py-3 bg-[#FF4500] text-white rounded-lg hover:bg-[#FF5722] transition-colors flex items-center justify-center gap-2"
-            >
-              <Send className="w-4 h-4" />
-              Send Message
-            </button>
-          </form>
-        </div>
-      </section> */}
-
-      {/* Footer */}
-      <footer className="py-12 px-4 lg:px-16 border-t border-zinc-800">
-        <div className="max-w-7xl mx-auto text-center">
+      <footer className="border-t border-white/10 px-4 py-12 text-center lg:px-12">
+        <div className="mx-auto max-w-7xl">
           <p className="text-zinc-400">© {new Date().getFullYear()} Swapnil Nare. All rights reserved.</p>
-          <div className="flex justify-center gap-6 mt-6">
-            <a
-              href="https://www.linkedin.com/in/swapnilnare/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-[#FF4500] transition-colors"
-            >
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a
-              href="https://www.artstation.com/vamps23"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-[#FF4500] transition-colors"
-            >
-              <Palette className="w-5 h-5" />
-            </a>
-            <a href="mailto:Swapnilnare007@gmail.com" className="text-zinc-400 hover:text-[#FF4500] transition-colors">
-              <Mail className="w-5 h-5" />
-            </a>
-            <a href="tel:+918766569006" className="text-zinc-400 hover:text-[#FF4500] transition-colors">
-              <Phone className="w-5 h-5" />
-            </a>
-          </div>
         </div>
       </footer>
     </main>
+  )
+}
+
+function ContactCard({
+  href,
+  title,
+  subtitle,
+  icon,
+}: {
+  href: string
+  title: string
+  subtitle: string
+  icon: React.ReactNode
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex flex-col items-center gap-4 rounded-[1.5rem] border border-white/10 bg-white/[0.04] px-6 py-10 text-center transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07] shadow-[0_20px_60px_rgba(0,0,0,0.35)]"
+    >
+      <div className="rounded-2xl bg-black/40 p-4 backdrop-blur group-hover:bg-black/30">{icon}</div>
+      <h3 className="text-xl font-semibold text-white">{title}</h3>
+      <p className="text-sm text-zinc-300">{subtitle}</p>
+    </a>
   )
 }
 
