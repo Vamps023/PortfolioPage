@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Swapnil Nare | Technical Artist Portfolio",
-  description: "Technical Artist portfolio featuring environment art, real-time workflows, tool development, and production-ready 3D projects.",
+  description: "Minimal Technical Artist portfolio featuring selected projects, skills, experience, and contact information.",
   generator: "Next.js",
 }
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${inter.className} bg-black text-white antialiased`}>{children}</body>
     </html>
   )
